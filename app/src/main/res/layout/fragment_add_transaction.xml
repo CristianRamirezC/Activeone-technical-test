@@ -79,6 +79,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 android:layout_marginHorizontal="25dp"
                 android:layout_marginTop="10dp"
+                android:inputType="numberDecimal"
                 />
             <Button
                 android:id="@+id/saveTransactionBTN"
