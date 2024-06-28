@@ -4,6 +4,7 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.activeone.activeonetechnichaltest.core.Constants
+import com.activeone.activeonetechnichaltest.data.model.TransactionModel
 
 @Entity(Constants.TRANSACTIONS_TABLE_NAME)
 data class TransactionEntity(
@@ -16,4 +17,9 @@ data class TransactionEntity(
 
     @ColumnInfo(name = "transaction_value")
     val transactionValue: Double
+)
+
+fun TransactionModel.toEntity() = TransactionEntity(
+    transactionConcept = transactionConcept,
+    transactionValue = transactionValue
 )
